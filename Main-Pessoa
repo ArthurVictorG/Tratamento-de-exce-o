@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main{
+  public static void main(String[] args){
+    Scanner pessoa = new Scanner(System.in);
+    System.out.println("Digite o nome da pessoa: ");
+    String nome = pessoa.nextLine();
+    System.out.println("Digite a idade da pessoa");
+    int idade = pessoa.nextInt();
+  try{
+    if(idade < 30){
+      throw new Exception("Idade inválida");
+    }
+    System.out.println("Seu nome é: " + nome + "\nSua idade é: " + idade); 
+  }
+    catch(Exception e){
+    System.out.println("Erro: " + e.getMessage());
+    }
+    finally{
+      pessoa.close();
+    }
+    
+    
+  }
+}
